@@ -1,0 +1,19 @@
+@charset "UTF-8";
+body{
+    background: #ffffff;
+    font: normal 14pt arial;
+    text-align: justify;
+}
+h1,h2{
+    text-align: center;
+}
+div{
+    width: 600px;
+    background: #1992;
+    box-shadow: 1px 1px 10px rgba(0,0,0,.5);
+    padding: 10px;
+    margin: auto;
+}div input{
+    padding: 5px;
+    margin: 5px;
+}

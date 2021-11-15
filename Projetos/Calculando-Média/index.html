@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAUTAS</title>
+    <link rel="stylesheet" href="_Css/style.css">
+</head>
+<body>
+
+    <div>
+        <h1>Universidade JS</h1>
+        <h2>Suas Notas</h2>
+        <hr>
+        Digite o seu nome: <input type="text" name="nome" id="nome" placeholder="Digite o seu nome" min="15" max="40"> <br>
+        A primeira nota: <input type="number" name="tn1" id="tn1"> <br>
+        A segunda nota: <input type="number" name="tn2" id="tn2"> <br>
+        digite a nota do exame: <input type="number" name="tnx" id="tnx"> <br>
+        <input type="button" value="Notas das Prova" onclick="calcular()"> <input type="button" value="Nota Final / Exame" onclick="exame()"> <hr>
+        <div id="res"><strong>Nota das Provas</strong></div> <br>
+        <div id="fim"><strong>Nota Final do Exame</strong></div>
+    </div>
+
+</body>
+<script src="_script/script.js"></script>
+</html>
