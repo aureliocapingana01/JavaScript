@@ -1,6 +1,6 @@
-let numerosMegaSena = document.getElementById('numerosMegaSena')
-let numerosEscolhidos = []
-let botaoJogar = document.getElementById('jogo')
+var numerosMegaSena = document.getElementById('numerosMegaSena')
+var numerosEscolhidos = []
+var botaoJogar = document.getElementById('jogo')
 
 numerosMegaSena.addEventListener('click', function(corDeFundo){
     corDeFundo.target.style.background = "red"
@@ -16,6 +16,26 @@ numerosMegaSena.addEventListener('click', function(corDeFundo){
 })
 function validaNumerosEscolhido(){
     if(numerosEscolhidos.length == 6){
-        botaoJogar.disabled = false
+        jogo.disabled = false
     }
+}
+var numerosSelecionados = []
+var resultado = ""
+var numerosSorteados = document.getElementById('numerosSorteados')
+botaoJogar.addEventListener('click', numeros_aleatorio)
+
+function numeros_aleatorio(){
+    if(resultado != "")
+       resultado = "";
+
+       while(numerosSelecionados.length < 6){
+          var aleatorio = Math.floor(Math.random()*60+1)
+
+          if(numerosSelecionados.indexOf(aleatorio) == -1){
+              resultado += aleatorio + " "
+              numerosSelecionados.push(aleatorio)
+          }
+       }
+
+       numerosSorteados.innerHTML = "os numeros foram +  resultado + parabéns"
 }
