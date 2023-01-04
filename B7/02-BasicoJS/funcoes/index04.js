@@ -25,6 +25,6 @@ function CalcularImovel(metragem, quartos) {
 }
 
 let metragem = 123
-let quartos = 3
+let quartos = 4
 let preco = CalcularImovel(metragem, quartos)
 console.log(`A casa custa R$ ${preco}`)
