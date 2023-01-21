@@ -42,4 +42,4 @@ let person = {
     ]
 }
 
-console.log(person.nationality[1])
+console.log(person.accounts)
