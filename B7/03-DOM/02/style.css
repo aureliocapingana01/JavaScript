@@ -1,0 +1,16 @@
+#nome{
+    width: 150px;
+    height: 150px;
+    margin: 20px;
+    border: 1px solid #555;
+    text-align: center;
+}
+.verde {
+    background-color: #00ff00;
+}
+.vermelho {
+    background-color: #ff0000;
+}
+.azul {
+    background-color: #0000ff;
+}

@@ -10,4 +10,4 @@ let person = {
     card : ['bronze', 'silver', 'gold']
 }
 
-console.log(`O cliente ${person.name} de nacionalidade ${person.country} conta numero ${person.bill.number} tem o saldo de ${person.bill.balance} tem como cartão de credito ${person.card[1]}`)
+console.log(`O cliente ${person.name} de nacionalidade ${person.country} conta numero ${person.bill.number} tem o saldo de ${person.bill.balance}, cartão de credito ${person.card[1]}`)
