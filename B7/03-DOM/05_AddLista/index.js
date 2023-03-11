@@ -20,4 +20,5 @@ const clicou = () => {
    ul.after(newul)
 }   
 
+//Chamar a função
 document.querySelector('.botao').addEventListener('click', clicou)
