@@ -1,0 +1,24 @@
+@charset "UTF-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main {
+width: 500px;
+height: auto;
+padding: 20px;
+margin: auto;
+margin-top: 50px;
+border-radius: 20px 0 ;
+box-shadow: 1px 1px 1px #55555575;
+}
+main > ul > li {
+    margin: 10px;
+    list-style: none;
+}
+main > input {
+    outline: none;
+    padding: 3px;
+    margin-bottom: 10px;
+}
