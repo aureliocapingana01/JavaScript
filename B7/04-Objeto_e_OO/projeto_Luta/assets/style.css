@@ -1,0 +1,33 @@
+@charset "UTF-8"; 
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.fightarea {
+    display: flex;
+    gap: 20px;
+    /* padding: 20px; */
+    margin: 40px;
+}
+#char,
+#monster {
+    flex: 1;
+}
+.lifebar {
+    height: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+.lifebar  .bar {
+    height: inherit; /*herdar altura do pai*/
+    background-color: red;
+    border-radius: 5px;
+}
+.log {
+    border: 1px dotted #999;
+    height: 200px;
+    overflow-y: scroll;
+    margin: 0 40px;
+}
