@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;  
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* background-color: aqua; */
+}
+.header {
+    height: 50px;
+    background-color: rgba(255, 0, 0, 0.658);
+}
+.slide {
+    flex: 1;
+    overflow: hidden;
+}
+.slide-width {
+    height: 100%;
+    display: flex;
+    transition: all ease 0.3s;
+}
+#um {
+    background-image: url("img/pexels-carlos-césar-2767923.jpg");
+}
+#dois {
+    background-image: url("img/pexels-heibby-cris-marvel-5745888.jpg");
+}
+#tres {
+background-image: url("img/pexels-tubarones-photography-16094813.jpg");
+}
+.slide-item {
+    width: 100vw;
+    height: inherit; /*Para herdar altura do pai*/
+    background-position: center;
+    background-size: cover;
+}
+.slide-controls {
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.slide-control {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}

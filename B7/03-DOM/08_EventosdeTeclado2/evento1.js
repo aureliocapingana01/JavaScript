@@ -7,7 +7,7 @@
 //     console.log('SEGUROU!!!')
 //  }
  const soltou = (e) => {
-    console.log(e.)
+    console.log(e)
  }
 
  const input = document.querySelector('input')
