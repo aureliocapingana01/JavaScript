@@ -1,3 +1,4 @@
+let listNumber = []
 let = numeroSecreto = numeroAleatorio() 
 let tentativas = 1
 
@@ -11,7 +12,7 @@ const exibirTexto = (tag, texto) => {
 
 function exibirMsgInicial() {
     exibirTexto('h1', 'Bem vindo ao Jogo')
-    exibirTexto('p', 'Escolha um número entre 1 á 10')
+    exibirTexto('p', 'Escolha um número entre 1 á 100')
 }
 
 exibirMsgInicial()
@@ -44,7 +45,16 @@ function verificarChute() {
 
 /* Fução com retorno */
 function numeroAleatorio() {
-   return parseInt(Math.random() * 100 + 1)
+   let numeroEscolhido = parseInt(Math.random() * 4 + 1)
+
+   if (listNumber.includes(numeroEscolhido)) {
+    return numeroAleatorio();
+   }
+   else {
+    listNumber.push(numeroEscolhido);
+    console.log(listNumber);
+    return numeroEscolhido;
+   }
 }
 
 /*Funcao para limpar o campo */
