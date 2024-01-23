@@ -1,4 +1,5 @@
-let listNumber = []
+let listaDeNumeroSorteado = []
+let limiteDaLista = 100
 let = numeroSecreto = numeroAleatorio() 
 let tentativas = 1
 
@@ -7,11 +8,13 @@ let tentativas = 1
 /* Fução com parametro */
 const exibirTexto = (tag, texto) => {
     let campo = document.querySelector(tag)
-    campo.innerHTML = texto
+    campo.innerHTML = texto;
+
+    responsiveVoice.speak(texto, 'Brazilian Portuguese Female', {rate:1.2});
 }
 
 function exibirMsgInicial() {
-    exibirTexto('h1', 'Bem vindo ao Jogo')
+    exibirTexto('h1', 'Bem vindo ao Jogo do Numero Secreto')
     exibirTexto('p', 'Escolha um número entre 1 á 100')
 }
 
@@ -32,10 +35,10 @@ function verificarChute() {
     }
     else {
         if (chute > numeroSecreto) {
-            exibirTexto('p', 'O você número secreto é menor')
+            exibirTexto('p', 'errou, o número secreto é menor')
         }
         else {
-            exibirTexto('p', 'O você número secreto é maior')
+            exibirTexto('p', 'errou,  número secreto é maior')
         }
         tentativas++
 
@@ -45,14 +48,19 @@ function verificarChute() {
 
 /* Fução com retorno */
 function numeroAleatorio() {
-   let numeroEscolhido = parseInt(Math.random() * 4 + 1)
+   let numeroEscolhido = parseInt(Math.random() * limiteDaLista + 1)
+   let qtdList = listaDeNumeroSorteado.length
 
-   if (listNumber.includes(numeroEscolhido)) {
+   if (qtdList == limiteDaLista) {
+    listaDeNumeroSorteado = []
+   }
+
+   if (listaDeNumeroSorteado.includes(numeroEscolhido)) {
     return numeroAleatorio();
    }
    else {
-    listNumber.push(numeroEscolhido);
-    console.log(listNumber);
+    listaDeNumeroSorteado.push(numeroEscolhido);
+    console.log(listaDeNumeroSorteado);
     return numeroEscolhido;
    }
 }
